@@ -342,6 +342,10 @@ class Application(object):
                              name='abbyjergerContigFilter.run_abbyjergerContigFilter',
                              types=[dict])
         self.method_authentication['abbyjergerContigFilter.run_abbyjergerContigFilter'] = 'required'  # noqa
+        self.rpc_service.add(impl_abbyjergerContigFilter.run_abbyjergerContigFilter_max,
+                             name='abbyjergerContigFilter.run_abbyjergerContigFilter_max',
+                             types=[dict])
+        self.method_authentication['abbyjergerContigFilter.run_abbyjergerContigFilter_max'] = 'required'  # noqa
         self.rpc_service.add(impl_abbyjergerContigFilter.status,
                              name='abbyjergerContigFilter.status',
                              types=[dict])

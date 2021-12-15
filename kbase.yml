@@ -2,7 +2,7 @@ module-name:
     abbyjergerContigFilter
 
 module-description:
-    A KBase module
+    A KBase module that I can describe from the kbase.yaml file, which is in the root directory of the module.
 
 service-language:
     python

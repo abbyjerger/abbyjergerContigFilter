@@ -10,8 +10,12 @@ module abbyjergerContigFilter {
     } ReportResults;
 
     /*
-        This example function accepts any number of parameters and returns results in a KBaseReport
+        This example function accepts any number of parameters and returns results in a KBaseReport for a minimum contig length
     */
     funcdef run_abbyjergerContigFilter(mapping<string,UnspecifiedObject> params) returns (ReportResults output) authentication required;
 
+    /*
+        New app using maximum contig length
+    */
+    funcdef run_abbyjergerContigFilter_max(mapping<string,UnspecifiedObject> params) returns (ReportResults output) authentication required;
 };

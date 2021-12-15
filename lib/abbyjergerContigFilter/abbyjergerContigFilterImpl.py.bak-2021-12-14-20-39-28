@@ -169,7 +169,7 @@ This sample module contains one small method that filters contigs.
         # Step 1- parameter validation
         # Your UI will validate parameters when the user is running through your module,
         # but also validate in the run method especially for anyone calling your code from their code.
-        print('Validating parameters from run_abbyjergerContigFilter_max.')
+        print('Validating parameters.')
 
         for name in ['min_length', 'max_length', 'assembly_ref', 'workspace_name']:
             if name not in params:
@@ -183,7 +183,7 @@ This sample module contains one small method that filters contigs.
 
         # Step 2- Download the input data as FASTA
         # initialize the Assembly utility then use it to download the assembly_ref
-        print('Downloading Assembly data as a Fasta file from run_abbyjergerContigFilter_max.')
+        print('Downloading Assembly data as a Fasta file.')
 
         # initialize AssemblyUtil
         assembly_util = AssemblyUtil(self.callback_url)
@@ -253,16 +253,17 @@ This sample module contains one small method that filters contigs.
             'filtered_assembly_ref': new_ref
         }
 
-        print('returning from _max:' + pformat(output))
+        print('returning:' + pformat(output))
 
         #END run_abbyjergerContigFilter_max
-
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
             raise ValueError('Method run_abbyjergerContigFilter_max return value ' +
                              'output is not type dict as required.')
+
         # return the results
         return [output]
+
     def status(self, ctx):
         #BEGIN_STATUS
         returnVal = {'state': "OK",
